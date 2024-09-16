@@ -13,5 +13,7 @@ jobs:
       - name: PHPUnit tests
         uses: php-actions/phpunit@v3
         with:
-          php_extensions: "xdebug"
+          # Extensions PHP à installer
+          php_extensions: "gd, xdebug"
           coverage_clover: "coverage/clover.xml"
+
