@@ -6,24 +6,10 @@ jobs:
   build-test:
     runs-on: ubuntu-latest
 
+    #lance make test
     steps:
-      #lance les tests unitaires
-      - run: phpunit --configuration phpunit.xml --coverage-text
-      - uses: php-actions/phan@v2
-      #lance l'analyse statique
-      - run: phan
-      - uses: php-actions/phpcs@v3
-      #lance le code sniffer
-      - run: phpcs --standard=PSR12 src/
-      - uses: php-actions/phpstan@v2
-      #lance l'analyse statique
-      - run: phpstan analyse src/
-      - uses: php-actions/security-checker@v2
-      #lance le security checker
-      - run: security-checker security:check
-      - uses: php-actions/psalm@v3
-      #lance l'analyse statique
-      - run: psalm
-      - uses: php-actions/infection@v2
-      #lance les tests mutationnels
-      - run: infection --min-msi=100 --min-covered-msi=100 --threads=4
+    - uses: actions/checkout@v2
+    - name: Run make test
+      run: make test
+      
+
