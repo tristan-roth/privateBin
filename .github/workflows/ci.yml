@@ -13,5 +13,6 @@ jobs:
       - name: PHPUnit tests
         uses: php-actions/phpunit@v3
         with:
+          version: '9.6.11'
           php_extensions: gd sqlite3 dom json mbstring libxml tokenizer xml xmlwriter zip
           memory_limit: "256M"
