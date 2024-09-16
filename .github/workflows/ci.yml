@@ -10,9 +10,10 @@ jobs:
       - uses: actions/checkout@v3
       - uses: php-actions/composer@v6
 
+
+
       - name: PHPUnit tests
         uses: php-actions/phpunit@v3
         with:
-          # Extensions PHP à installer
-          php_extensions: "gd, xdebug"
-          coverage_clover: "coverage/clover.xml"
+          configuration: "phpunit.xml"
+          memory_limit: "256M"
