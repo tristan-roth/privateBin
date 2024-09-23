@@ -10,6 +10,9 @@ jobs:
       - uses: actions/checkout@v3
       - uses: php-actions/composer@v6
 
+      - name: Set Xdebug mode
+        run: echo "XDEBUG_MODE=coverage" >> $GITHUB_ENV
+
       - name: PHPUnit tests
         uses: php-actions/phpunit@v3
         with:
