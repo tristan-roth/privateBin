@@ -17,6 +17,7 @@ jobs:
           php_extensions: gd sqlite3 dom json mbstring libxml tokenizer xml xmlwriter zip
           memory_limit: "256M"
           coverage_clover: coverage/coverage.cobertura.xml
+          coverage_text: true
 
       - name: Code Coverage Report
         uses: irongut/CodeCoverageSummary@v1.3.0
