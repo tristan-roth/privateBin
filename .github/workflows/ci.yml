@@ -18,7 +18,6 @@ jobs:
         with:
           version: '9.6.11'
           php_extensions: gd sqlite3 dom json mbstring libxml tokenizer xml xmlwriter zip xdebug
-          memory_limit: "256M"
           coverage_cobertura: coverage/coverage.cobertura.xml
 
       - name: Code Coverage Report
