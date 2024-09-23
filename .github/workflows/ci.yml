@@ -19,6 +19,7 @@ jobs:
           version: '9.6.11'
           php_extensions: gd sqlite3 dom json mbstring libxml tokenizer xml xmlwriter zip xdebug
           memory_limit: "512M"
+          coverage_text: true
           configuration: phpunit.xml
 
       - name: Code Coverage Report
