@@ -32,6 +32,10 @@ jobs:
           indicators: true
           output: both
           thresholds: '60 80'
+      - name : Lauchn phpstan
+        uses: php-actions/phpstan@v3
+        with:
+          level: 7
 
       - name : Add markdown
         run : cat code-coverage-results.md >> $GITHUB_STEP_SUMMARY
