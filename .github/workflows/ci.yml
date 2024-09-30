@@ -34,7 +34,7 @@ jobs:
           thresholds: '60 80'
 
       - name : Add markdown
-        run : cat /github/workspace/log/coverage-cobertura.xml >> $GITHUB_STEP_SUMMARY
+        run : cat code-coverage-results.md >> $GITHUB_STEP_SUMMARY
 
 
 
