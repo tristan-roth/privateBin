@@ -33,8 +33,11 @@ jobs:
           output: both
           thresholds: '60 80'
 
+  example:
+    runs-on: ubuntu-latest
 
-      - name: Add markdown
-        run : cat log/coverage-summary.md >> $GITHUB_ENV_FILE
+    steps :
+      - name : Add markdown
+        run : cat /github/workspace/log/coverage-cobertura.xml >> /github/workspace/log/coverage.md
 
 
