@@ -35,6 +35,7 @@ jobs:
       - name : Lauchn phpstan
         uses: php-actions/phpstan@v3
         with:
+          path: lib/
           level: 7
 
       - name : Add markdown
